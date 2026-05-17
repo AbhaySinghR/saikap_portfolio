@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Abhay Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .gallery-section-title {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .carousel {
+      position: relative;
+    }
+
+    .carousel-track {
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel-slide {
+      display: none;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--border);
+    }
+
+    .photo-caption {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .carousel-btn {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.8rem;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .carousel-btn:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .carousel-counter {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="name" href="index.html">Abhay Singh</a>
+  <a href="index.html#work">Work</a>
+  <a href="index.html#hackathons">Hackathons</a>
+  <a href="index.html#research">Research</a>
+  <a href="index.html#coding">Coding</a>
+  <a href="updates.html">Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="index.html#resume">Resume</a>
+</nav>
+
+<main>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+
+    <div class="gallery-section">
+      <div class="gallery-section-title">Hackathon Wins</div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="Gallery/Winner%20Luddy%20Hackathon%20Fifth%20Edition.JPG" alt="Winner — Luddy Hackathon Fifth Edition" />
+            <p class="photo-caption">Code Till Dawn — Luddy Hackathon Fifth Edition, 2026</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="Gallery/Winner%20Luddy%20Hackathon%20Fourth%20Edition.JPG" alt="Winner — Luddy Hackathon Fourth Edition" />
+            <p class="photo-caption">Luddy Hackathon Fourth Edition, 2025</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="Gallery/Winner%20Luddy%20Hackathon%20Third%20Edition.JPG" alt="Winner — Luddy Hackathon Third Edition" />
+            <p class="photo-caption">Luddy Hackathon Third Edition, 2024</p>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" data-prev>&#8592; Prev</button>
+          <span class="carousel-counter">1 / 3</span>
+          <button class="carousel-btn" data-next>Next &#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <div class="gallery-section-title">Competitions &amp; Presentations</div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="Gallery/Clapp%20Competetion%20at%20Kelly%20School%20of%20Business.JPG" alt="Clapp Competition at Kelly School of Business" />
+            <p class="photo-caption">Clapp Competition — Kelly School of Business</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="Gallery/Clapp%20Competetion%20at%20Kelly%20School%20of%20Business%20Img2.JPG" alt="Clapp Competition at Kelly School of Business" />
+            <p class="photo-caption">Clapp Competition — Kelly School of Business</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="Gallery/CV%20Poster%20Presentation.JPG" alt="CV Poster Presentation" />
+            <p class="photo-caption">CV Poster Presentation</p>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" data-prev>&#8592; Prev</button>
+          <span class="carousel-counter">1 / 3</span>
+          <button class="carousel-btn" data-next>Next &#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <div class="gallery-section-title">Team Dinners &amp; Events</div>
+      <div class="carousel-slide active">
+        <img src="Gallery/Team%20Dinner%20with%20Prof%20Shen.JPG" alt="Team Dinner with Prof. Shen" style="width:100%; max-height:520px; object-fit:cover; border:1px solid var(--border);" />
+        <p class="photo-caption">Team dinner with Prof. Shen Jia</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Abhay Singh &nbsp;·&nbsp; <a href="mailto:abhaysaikap@gmail.com">abhaysaikap@gmail.com</a>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const counter = carousel.querySelector('.carousel-counter');
+    let current = 0;
+
+    function show(index) {
+      slides[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      counter.textContent = `${current + 1} / ${slides.length}`;
+    }
+
+    carousel.querySelector('[data-prev]').addEventListener('click', () => show(current - 1));
+    carousel.querySelector('[data-next]').addEventListener('click', () => show(current + 1));
+  });
+</script>
+
+</body>
+</html>

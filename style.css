@@ -1,0 +1,279 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --border: #e0e0e0;
+  --link: #0066cc;
+  --max-w: 720px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0 1.5rem;
+}
+
+/* ── Nav ── */
+nav {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1.5rem 0 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+nav .name {
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  margin-right: auto;
+}
+
+nav a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover { color: var(--text); text-decoration: underline; }
+
+/* ── Main container ── */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* ── Sections ── */
+section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-child { border-bottom: none; }
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+p { margin-bottom: 0.75rem; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--link); }
+a:hover { text-decoration: none; }
+
+/* ── About header ── */
+.about-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.about-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.about-header .photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--muted);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+/* ── Work group (org heading) ── */
+.work-group {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+.work-group-title {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.work-group .entry:last-child { margin-bottom: 0; }
+
+/* ── Work entries ── */
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.entry:last-child { margin-bottom: 0; }
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entry-title {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.entry-meta {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry-sub {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.entry p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ── Tags ── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.tag {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* ── Coding profiles ── */
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.profile-link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.profile-link .platform {
+  min-width: 110px;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.profile-link .handle {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ── Resume ── */
+.resume-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--text);
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn.primary {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn.primary:hover {
+  background: #333;
+}
+
+/* ── Footer ── */
+footer {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 500px) {
+  .about-header { flex-direction: column; align-items: center; text-align: center; }
+  .entry-header { flex-direction: column; gap: 0.1rem; }
+  .entry-meta { white-space: normal; }
+}
