@@ -27,10 +27,14 @@ nav {
   padding: 1.5rem 0 1rem;
   display: flex;
   align-items: baseline;
-  gap: 1.5rem;
+  gap: 1rem;
   border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
+nav::-webkit-scrollbar { display: none; }
 
 nav .name {
   font-weight: bold;
@@ -38,14 +42,16 @@ nav .name {
   text-decoration: none;
   color: var(--text);
   margin-right: auto;
+  white-space: nowrap;
 }
 
 nav a {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--muted);
   text-decoration: none;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 nav a:hover { color: var(--text); text-decoration: underline; }
@@ -81,7 +87,7 @@ h1 {
 
 h2 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
